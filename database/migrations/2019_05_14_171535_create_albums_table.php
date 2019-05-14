@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSiteusersTable extends Migration
+class CreateAlbumsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateSiteusersTable extends Migration
      */
     public function up()
     {
-        Schema::create('siteusers', function (Blueprint $table) {
-            $table->bigIncrements('id')->unsigned();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->integer('role');
-            $table->string('email');
-            $table->unique(['email','role']);
-            $table->string('password');
+        Schema::create('albums', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->bigInteger('artistuserid')->unsigned();
+            $table->foreign('artistuserid')->references('id')->on('siteusers');
+            $table->string('coverextension');
             $table->boolean('isdeleted');
+           
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ class CreateSiteusersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('siteusers');
+        Schema::dropIfExists('albums');
     }
 }
