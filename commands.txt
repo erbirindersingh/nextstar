@@ -1,0 +1,16 @@
+composer create-project laravel/laravel nextstar
+npm install
+npm run dev or npm run watch to compile 
+
+php artisan make:controller UserController
+php artisan make:model Siteuser -m(creates migration)
+php artisan migrate
+php artisan migrate:rollback
+
+
+Laravel API
+https://www.youtube.com/watch?v=Q9njqDukMfU
+API Token
+https://www.youtube.com/watch?v=KDysgqRAG4M
+Laravel Passport
+https://www.youtube.com/watch?v=JKS1y83JgSM
