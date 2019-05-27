@@ -17,5 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('adduser','SiteusersController@registernewuser');
+Route::post('adduser','SiteusersController@registernewuser');
 Route::post('verifyuser','SiteusersController@verifyuser');
+Route::post('forgotpassword','SiteusersController@forgotpassword');
+
+

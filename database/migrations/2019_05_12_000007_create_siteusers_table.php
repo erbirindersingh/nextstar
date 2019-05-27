@@ -18,8 +18,7 @@ class CreateSiteusersTable extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->integer('role');
-            $table->string('email');
-            $table->unique(['email','role']);
+            $table->string('email')->unique();
             $table->string('password');
             $table->timestamps();
         });

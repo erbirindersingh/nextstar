@@ -1,4 +1,4 @@
-composer create-project laravel/laravel nextstar
+ composer create-project laravel/laravel nextstar
 npm install
 npm run dev or npm run watch to compile 
 

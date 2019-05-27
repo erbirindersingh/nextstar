@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Whoozl</title>
 		<link rel="stylesheet" href="css/app.css">
+		<link rel="stylesheet" href="css/custom.css">
 	</head>
 	<body>
 		@include('inc.navbar')
@@ -20,5 +21,6 @@
 				</div>
 			</div>
 		</div>
+		@include('inc.footer')
 	</body>
 </html>
