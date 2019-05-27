@@ -5,6 +5,7 @@
 		<title>Whoozl</title>
 		<link rel="stylesheet" href="css/app.css">
 		<link rel="stylesheet" href="css/custom.css">
+        <link href="https://fonts.googleapis.com/css?family=Bevan&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		@include('inc.navbar')

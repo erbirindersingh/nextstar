@@ -30,4 +30,11 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/artistsignup', function () {
+    return view('artistsignup');
+});
+
+Route::get('/fansignup', function () {
+    return view('fansignup');
+});
 
