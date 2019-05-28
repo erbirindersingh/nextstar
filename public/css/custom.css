@@ -1,3 +1,6 @@
+body{
+   font-family: Arail, sans-serif;
+}
 #footer{
 
 	position: absolute;
@@ -13,6 +16,7 @@
 .wrapper{
 	min-height: 100%;	
 }
+/* **************Artist sign up and fun sign up css home page************* */
 
 button{
     background-color:#6D00D9;
@@ -89,7 +93,30 @@ input{
     padding:5px;
 
 }
+h1{
+    font-size: 36px;
+    color: #6d00d9;
+    padding: 0px;
+    margin: 0px 0px 15px 0px;
+    text-shadow: 2px 2px 0px #ccc;
+    font-family: Arail, sans-serif;
+    font-weight:bold;
 
+}
+
+input[type=submit] {
+    background-color: #6d00d9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    width:7em;
+    margin-left:18em;
+}
 /**** Login Page *********/
 #radioFan{
     margin: 10px;	

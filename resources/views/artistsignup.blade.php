@@ -5,7 +5,9 @@
 <div class="new_frm_content">
 	<h1>Artist Registration </h1><br>
 	
-<div style="text-align: center;"><a href="#"><img class="login_image" src="{{URL::asset('/images/fblogin-btn.png')}}" style="width:200px;"></a></div>	<div class="or-seperator"><i>or</i></div>
+    <div style="text-align: center;"><a href="#"><img class="login_image" src="{{URL::asset('/images/fblogin-btn.png')}}" style="width:200px;"></a></div>	
+    
+    <div class="or-seperator"><i>or</i></div>
 	
 	<form method="post" action="#" style="clear:both;" enctype="multipart/form-data">
 		<input type="hidden" name="register" value="true">
@@ -71,7 +73,7 @@
     
     
     <div class="row">
-      <input type="submit" value="Submit" style="margin-top: 15px; margin-right: 15px;height: 40px;">
+      <input type="submit" value="Submit" class="btn-form" style="margin-top: 15px; margin-right: 15px;height: 40px;">
     </div>
 
 	</form>
