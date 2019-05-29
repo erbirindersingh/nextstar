@@ -83,7 +83,7 @@
         -->    
         
         <div class="row">
-          <input type="submit" value="Submit" style="margin-top: 15px; margin-right: 15px;height: 40px;">
+          <input type="submit" id="btn-fan" value="Submit" class="btn-form">
         </div>
 
         </form>

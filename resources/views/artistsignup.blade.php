@@ -73,7 +73,7 @@
     
     
     <div class="row">
-      <input type="submit" value="Submit" class="btn-form" style="margin-top: 15px; margin-right: 15px;height: 40px;">
+      <input type="submit" id="btn-artist" value="Submit" class="btn-form" style="margin-top: 15px; margin-right: 15px;height: 40px;">
     </div>
 
 	</form>

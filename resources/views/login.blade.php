@@ -33,10 +33,8 @@
 								<div class="input-group-text">Login as:</div>
 							</div>
 							<div id="radioFan">
-								<label><input type="radio" class="radio-inline" name="loginas">Fan</label>
-							</div>
-							<div id="radioArtist">
-								<label><input type="radio" class="radio-inline" name="loginas">Artist</label>
+								<input type="radio" class="radio-inline" name="loginas"/>Artist
+							    <input type="radio" class="radio-inline" name="loginas"/>Fan
 							</div>
 						</div>
 					</div>

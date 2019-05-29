@@ -104,7 +104,20 @@ h1{
 
 }
 
-input[type=submit] {
+#btn-artist[type=submit] {
+    background-color: #6d00d9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    padding: 12px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    width:7em;
+    margin-left:18em;
+}
+#btn-fan[type=submit] {
     background-color: #6d00d9;
     color: white;
     border: none;
@@ -136,4 +149,20 @@ input[type=submit] {
   margin: 7em 20px;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#radioFan input{
+    box-shadow:none;
+    width:50px;
+}
+.checkbox-inline input{
+    width:50px;
+    box-shadow:none;    
+    
+}
+.checkbox-inline{
+    margin-left: -235px;
+}
+.btn btn-danger{
+    margin-left:0em;
+    float:right;
 }
