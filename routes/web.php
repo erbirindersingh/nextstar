@@ -38,3 +38,6 @@ Route::get('/fansignup', function () {
     return view('fansignup');
 });
 
+Route::get('/artistpage', function () {
+    return view('artistpage');
+});

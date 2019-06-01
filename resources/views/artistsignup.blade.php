@@ -73,10 +73,12 @@
     
     
     <div class="row">
-      <input type="submit" id="btn-artist" value="Submit" class="btn-form" style="margin-top: 15px; margin-right: 15px;height: 40px;">
+      <input type="submit" id="btn-artist" <!--href="/artistpage"--> value="Submit" class="btn-form" style="margin-top: 15px; margin-right: 15px;height: 40px;">
     </div>
 
 	</form>
 </div>
-
+    <div>
+        <a href="/artistpage">Artist page</a>
+    </div>
 @endsection

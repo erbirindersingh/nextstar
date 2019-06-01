@@ -166,3 +166,8 @@ h1{
     margin-left:0em;
     float:right;
 }
+
+/*****************Changes in header *************/
+.bg-dark {
+  background-color: #6d00d9 !important;
+}
