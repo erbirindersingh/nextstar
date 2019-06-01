@@ -11,14 +11,29 @@
 |
 */
 
+Route::post('/adduser','SiteusersController@registernewuser');
+Route::post('/verifyuser','SiteusersController@verifyuser');
+Route::post('/forgotpassword','SiteusersController@forgotpassword');
+
+
 Route::get('/', function () {
     //return view('welcome');
     return view('home');
 });
 
+Route::get('/logout', function () {
+    return view('/login');
+});
+
+
 Route::get('/about', function () {
     //return view('welcome');
     return view('about');
+});
+
+Route::get('/dashboard', function () {
+    //return view('welcome');
+    return view('dashboard');
 });
 
 Route::get('/contact', function () {
