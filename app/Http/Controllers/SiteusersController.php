@@ -13,7 +13,7 @@ class SiteusersController extends Controller
 {
 	public function verifyuser(Request $request){
 		try{
-			$record = DB::table('siteusers')->select('password','id','firstname','lastname','role')->where('email',$request->email)->where('role',$request->role)->first();
+			$record = DB::table('siteusers')->select('password','id','firstname','lastname','role')->where('email',$request->email)->where('role',$request->role)->first(); 
 			if(password_verify($request->password,$record->password))
 			{
 				$data = [
@@ -24,6 +24,12 @@ class SiteusersController extends Controller
 	    			'lastname' => $record->lastname,
 	    			'role' => $record->role
 	    		];
+	    		if($request->wm=='w'){
+    				return redirect('dashboard')->with( ['data' => $data] );
+    			}
+    			else if($request->wm=='m'){
+					return response()->json($data);
+    			}
 			}
 			else
 			{
@@ -32,6 +38,12 @@ class SiteusersController extends Controller
 	    			'status' =>  'Wrong Credentials',
 	    			'id' => 0
 	    		];	
+	    		if($request->wm=='w'){
+    				return redirect('logout')->with( ['data' => $data] );
+    			}
+    			else if($request->wm=='m'){
+					return response()->json($data);
+    			}
 			}
 		}
 		catch(\Exception $e){
@@ -39,12 +51,17 @@ class SiteusersController extends Controller
     		//$errorMsg = $error->getErrorMessage($e->getCode());
        		$data = [
        		'statuscode' => 0,
-    		'status' =>  'Check your credentials',
+    		'status' =>  $e->getMessage()." ".$request->password,
     		'id' => 0,
     		];
-    	
+    		if($request->wm=='w'){
+    			return redirect('logout')->with( ['data' => $data] );
+    		}
+    		else if($request->wm=='m'){
+				return response()->json($data);
+    		}
     	}
-		return response()->json($data);
+    	
 	}
 
 	public function randomPassword(){
