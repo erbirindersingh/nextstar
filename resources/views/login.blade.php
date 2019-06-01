@@ -1,11 +1,13 @@
- 
+@extends('layouts.appwithoutsidebar')
+ @section('content')
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				
+				<?php print_r(Session::get('data')); ?>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 			<div id="login">
-				<form method="POST" action="#">
+				<form method="POST" action="/verifyuser">
+					@csrf
 					<div class="col-auto">
 						<label class="sr-only" for="email">Email</label>
 						<div class="input-group mb-2">
@@ -31,14 +33,15 @@
 								<div class="input-group-text">Login as:</div>
 							</div>
 							<div id="radioFan">
-								<input type="radio" class="radio-inline" name="loginas"/>Artist
-							    <input type="radio" class="radio-inline" name="loginas"/>Fan
+								<input type="radio" class="radio-inline" name="role" value="2" />Artist
+							    <input type="radio" class="radio-inline" name="role" value="1" />Fan
 							</div>
 						</div>
 					</div>
 					<div>
 						<label class="checkbox-inline">Keep me signed in:<input type="checkbox"id="keepsignedin" value="true"></label>
 					</div>
+					<input type='hidden' value='w' name='wm'>
 					<input type="submit" name="loginBtn" value="Log In" class="btn btn-danger">
 					<input type="button" value="Forgot Password" class="btn btn-primary">
 					<div>
